@@ -1,8 +1,57 @@
 <html>
 <head>
+    <link rel="stylesheet" href="style.css"/>
     <title>MIS3033 Octobr 9th, Zyler Wies</title>
+
+    <style>
+        #div2
+        {
+            background-color:aquamarine;
+        }
+        #div3
+        {
+            background-color:teal;
+        }
+        #div4
+        {
+            background-color: mediumaquamarine;
+        }
+        #div5
+        {
+            background-color: seagreen;
+        }
+        #div6
+        {
+            background-color: turquoise;
+        }
+    </style>
 </head>
 <body>
+    <span class="titlestyle">Box sizing</span>
+    <div  class="divstyle1 titlestyle" style="color: aquamarine; padding-left:20px;">Div 1</div>
+    <div class="divstyle1 titlestyle" style="padding-left:20px; box-sizing:border-box">Div 2</div>
+    <br />
+
+    <span class="titlestyle"> CSS Selectors</span>
+    <div id="main" style="position:relative; background-color: steelblue; height:400px;">
+        <div id="div1" style="position:sticky; top:3px;">Div1</div>
+        <div id="div2">Div2</div>
+        <div id="div3">Div3</div>
+        <div id="div4" style="position:absolute; right:0; top:0;">Div4</div>
+        <div id="div5" style="position:relative; left: 10px; top: 10px;">Div5</div>
+        <div id="div6">Div6</div>
+
+        <div id="menu" style="position:fixed; right:0; top:100px; border-width:70px; height:60px; background-color: mediumturquoise;">
+            Option 1 <br />
+            Option 2 <br />
+            Option 3
+        </div>
+    </div>
+
+   
+
+
+
     <div style="width:200px; height:100px; background-color:deepskyblue; margin-left: 50px; padding-top:20px; padding-left:30px;">
         Div 1
     </div>

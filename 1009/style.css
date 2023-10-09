@@ -1,0 +1,35 @@
+.titlestyle {
+    font-size: 20px;
+    color: teal;
+    font-weight: bold;
+}
+
+.divstyle1 {
+    width: 40px;
+    height: 50px;
+    border-style: solid;
+    background-color: lightslategray;
+}
+
+* {
+    /*  border-style:dashed;
+            border-width: 5px;
+            border-color:darkcyan;*/
+}
+
+div {
+    /*border-style: dashed;
+            border-width: 5px;
+            border-color: darkcyan;*/
+}
+
+span {
+    /*border-style: dashed;
+            border-width: 5px;
+            border-color: darkcyan;*/
+}
+
+#div1 {
+    background-color: darkcyan;
+    height: 30px;
+}
