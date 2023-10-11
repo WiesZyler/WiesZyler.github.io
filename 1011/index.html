@@ -1,29 +1,110 @@
 <html>
 <head>
     <title>MIS3033 October 11, Zyler Wies</title>
-</head>
-<style>
-    #maindiv {
-        background-color: aliceblue;
-        width: 800px;
-        height: 500px;
-        display: flex;
-        flex-direction: row;
-    }
+    <style>
+        #webdiv {
+            width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
-    .d1 {
-        width: 100px;
-        height: 120px;
-        margin-left:10px;
-        margin-right:10px;
-        background-color:dodgerblue;
-    }
-</style>
+        #maindiv {
+            height: 100px;
+            display: flex;
+            align-items: center; 
+            flex-direction: row;
+            font-size: 30pt;
+            color: dodgerblue;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .bodydiv {
+            border-width: 2px;
+            border-style: solid;
+            border-color: darkgray;
+            border-radius: 10px;
+            color: darkgrey;
+            width: 480px;
+            margin-top:5px;
+            margin-bottom:5px;
+            margin-left:5px;
+            margin-right:5px;
+        }
+
+
+
+        .listdiv {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .misdiv {
+            color: dodgerblue;
+            font-size: 20pt;
+            font-weight: bold;
+            border-width: 2px;
+            border-style: solid;
+            border-color: darkgray;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        #footerdiv
+        {
+            height:50px;
+            position:relative;
+            background-color:aliceblue;
+            box-sizing:border-box;
+            color:darkgray;
+            border-radius:5px;
+            text-align:center;
+            padding-top:15px;
+
+        }
+    </style>
+</head>
+
 <body>
-    <div id="maindiv" >
-        <div class="d1">div 1</div>
-        <div class="d1">div2</div>
-        <div class="d1">div3</div>
+    <div id="webdiv">
+        <div id="maindiv" >
+            <p style="margin-left: auto; margin-top: auto; margin-bottom: auto; " >I LOVE PROGRAMMING!</p>
+            <img style="height: 100px; margin-right: auto;" src="img/a.svg" />
+        </div>
+
+
+        <div style="display:flex; flex-direction:row">
+            <div>
+                <div class="bodydiv" style="display:flex; flex-direction:column;">
+                    <span class="listdiv" style="background-color:lightskyblue; border-radius:5px; width:210px">What I already learned:</span>
+                    <ul>
+                        <li>C#</li>
+                        <li>C# Entity Framework</li>
+                        <li>Database Sqlite</li>
+                        <li>HTML & CSS</li>
+                    </ul>
+                </div>
+                <div class="bodydiv">
+                    <span class="listdiv">What I am going to learn next:</span>
+                    <ol>
+                        <li>Javascript</li>
+                        <li>Bootstrap</li>
+                        <li>ASP.NET MVC</li>
+                        <li>Web REST API</li>
+                    </ol>
+                </div>
+            </div>
+
+
+                <div class="bodydiv misdiv">
+                    <span>I Love MIS3033</span>
+                    <img src="img/b.svg" style="width:400px;" />
+
+                </div>
+        </div>
+        <div id="footerdiv">
+            Designed and Developed by Zyler Wies for MIS3033 Exam 2
+        </div>
     </div>
 </body>
 </html>
