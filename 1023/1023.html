@@ -1,14 +1,163 @@
 <html>
 <head>
     <title>[] Zyler Wies October 23, 2023 Exam 2 Practice</title>
+    <style>
+        #main {
+            display: flex;
+            flex-direction: column;
+            width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #top {
+            color: dodgerblue;
+            font-size: 20pt;
+            font-weight: bold;
+            display: flex;
+            align-content: flex-start;
+        }
+
+        #body {
+            display: flex;
+            flex-direction: row;
+        }
+
+        #left {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 400px;
+        }
+
+        #right {
+            display: flex;
+            flex-direction: column;
+            width: 800px;
+        }
+
+        #rBottom {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .text {
+            font-size: 20px;
+            color: dimgrey;
+        }
+
+        .links {
+            width: 30px;
+        }
+
+        #bottom{
+            background-color:#ededed
+        }
+        #footer{
+            background-color:#faf7f7;
+            text-align:center;
+            color:dimgrey;
+        }
+    </style>
 </head>
 <body>
+    <div id="main">
+        <div id="top">Zyler Wies's Website</div>
+        <div id="body">
+            <div id="left">
+                <div>
+                    <img src="img/head1.png" style="width:200px; border-radius:50%;" />
+                </div>
+                <div>
+                    <div style="font-size:30px;">Zyler Wies</div>
+                    <div class="text">Student in Management Information Systems</div>
+                    <div class="text">The University of Oklahoma</div>
+                </div>
+                <span id="links">
+                    <a href="mailto:zwies@ou.edu" target="_blank"> <img src="img/email.png" class="links" /> </a>
+                    <a href="https://www.linkedin.com/in/zylerwies/" target="_blank"><img src="img/linkedin.png" class="links" /></a>
+                    <a href="https://twitter.com/" target="_blank"><img src="img/twitter.png" class="links" /></a>
+                    <a href="https://www.instagram.com/zylerthehuman/" target="_blank"><img src="img/instagram.png" class="links" /></a>
+                </span>
 
-    <img src="img/head1.png" style="width:100px;"/>
-    <img src="img/email.png" style="width:100px;"/>
-    <img src="img/linkedin.png" style="width:100px;"/>
-    <img src="img/twitter.png" style="width:100px;"/>
-    <img src="img/instagram.png" style="width:100px;"/>
+            </div>
+            <div id="right">
+                <div id="rTop">
+                    
+                    <span style="font-weight:bold; font-size:30px;">Biography</span>
+
+                    <p>
+                        I am a Senior student in Management Information Systems at The University of Oklahoma. I am on the 2022/2023 job market.
+                    </p>
+
+                    <p>
+                        My study focuses on data analytics and I am good at programming (Console, Desktop and Web Applications) and databases management.
+                    </p>
+
+                    <p>
+                        For more information, please refer to my <span style="color:dodgerblue">CV</span>.
+                    </p>
+
+                </div>
+                <div id="rBottom">
+                    <div id="rLeft">
+
+                        <span style="font-weight:bold; font-size:30px;">Interests</span>
+                        <ol>
+                            <li>Analyst/Programmer</li>
+                            <li>Business Analyst</li>
+                            <li>Database Administration</li>
+                            <li>Web Developer</li>
+                            <li>Data Scientists</li>
+                        </ol>
+
+
+
+
+
+                    </div>
+                    <div id="rRight">
+
+                        <span style="font-weight:bold; font-size:30px;">Education</span>
+
+                        <ul>
+                            <li>
+                                M.S. in Management Information Systems, 2024
+                                The University of Oklahoma
+                            </li>
+                            <li>
+                                B.E. in Management Information Systems, 2022
+                                The University of Oklahoma
+                            </li>
+                        </ul>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="bottom">
+            <span style="font-weight:bold; font-size:30px;">Interests</span>
+            <ul>
+                <li>
+                    Learning C# Web Application Design
+                </li>
+                <li>
+                    Learning C# EF
+                </li>
+            </ul>
+        </div>
+        <div id="footer">
+            Designed and Published by Zyler Wies
+        </div>
+    </div>
+
+
+
+
 
 </body>
 </html>
