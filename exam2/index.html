@@ -1,15 +1,159 @@
 <html>
 <head>
-    <title>[] Zyler Wies Exam 2 MIS3033</title>
+    <title>[ZMUI] Zyler Wies Exam 2 MIS3033</title>
+    <style>
+        #main {
+            display: flex;
+            flex-direction: column;
+            width:800px;
+        }
+        #header {
+            display: flex;
+            flex-direction: row;
+        }
+        .headerdiv{
+            display:flex;
+            width:200px;
+            height:70px;
+            border-style:solid;
+            border-width:1px;
+            border-color:lightgrey;
+            border-radius:5px;
+            text-align:center;
+            align-items:center;
+            justify-content:center;
+            margin-right:10px;
+           
+        }
+        #top {
+            display: flex;
+            flex-direction: row;
+            border-style: solid;
+            border-width: 1px;
+            border-color: lightgrey;
+            border-radius: 5px;
+            height: 80px;
+            align-items: center;
+        }
+        #body {
+            display: flex;
+            flex-direction: row;
+         
+        }
+        #left {
+            display: flex;
+            flex-direction: column;
+            width: 510px;
+        }
+        #lTop {
+            height: 110px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: lightgrey;
+            border-radius: 5px;
+        }
+        #lBottom {
+            height: 160px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: lightgrey;
+            border-radius: 5px;
+        }
+        #right {
+            display: flex;
+            flex-direction:column;
+            width: 280px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: lightgrey;
+            border-radius: 5px;
+        }
+        #footer {
+            display: flex;
+            border-style: solid;
+            border-width: 1px;
+            border-color: lightgrey;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 20px;
+            color: grey;
+            height: 60px;
+            align-items: center;
+            justify-content: center;
+        }
+        .image {
+            border-style: solid;
+            border-width: 1px;
+            border-color: lightgrey;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
-    <img src="img/head1.png" style="height:100px;"/>
-    <img src="img/head2.png" style="height:100px;"/>
-    <img src="img/linkedin.png" style="height:100px;"/>
-    <img src="img/html.svg" style="height:100px;"/>
-    <img src="img/css.svg" style="height:100px;"/>
-    <img src="img/javascript.svg" style="height:100px;"/>
-    <img src="img/sqlite.svg" style="height:100px;"/>
-    <img src="img/logo.svg" style="height:100px;"/>
+    <div id="main">
+        <div id="header">
+            <div class="headerdiv">
+                MIS 3033 Exam 2 <br />
+                Zyler Wies
+            </div>
+            <div class="headerdiv">
+                [ZMUI]
+            </div>
+        </div>
+        <div id="top">
+            <img src="img/head1.png" style="height:60px; border-radius:50%; margin-right:10px;" />
+            <p style="margin-right:20px;">
+                Zyler Wies <br />
+                MIS Student
+
+            </p>
+            <a href="https://www.linkedin.com/" target="_blank"><img src="img/linkedin.png" style="height:30px;" /></a>
+        </div>
+        <div id="body">
+            <div id="left">
+                <div id="lTop">
+                    <span style="text-transform:uppercase; background-color:lightskyblue; border-radius:5px;">About Me:</span><br />
+                    I am a MIS student. I like programming and I am good at C#. I leaned Entity Framework for Database Manipulations. I know HTML, CSS and I started to learn JavaScript. It is fun. Later I will learn C# .NET MVC Dynamic Web App development and Web API development.
+                </div>
+                <div id="lBottom">
+                    <span style="text-transform:uppercase; background-color:lightskyblue; border-radius:5px;">Achievements</span><br />
+                    <p></p>
+                                                                                                                                 <div style="display: flex; align-items: end; justify-content: center; ">
+                                                                                                                                     <img src="img/html.svg" style="height:100px;" class="image" />
+                                                                                                                                     <img src="img/css.svg" style="height:100px;" class="image" />
+                                                                                                                                     <img src="img/javascript.svg" style="height:100px;" class="image" />
+                                                                                                                                 </div>
+
+
+                </div>
+            </div>
+            <div id="right">
+                <div>
+                    <span style="text-transform:uppercase; background-color:lightskyblue; border-radius:5px;">Recent News:</span><br />
+                </div>
+                
+                <ul>
+                    <li>Learned C#</li>
+                    <li>Learned Entity Framwork</li>
+                    <li>Learned <img src="img/sqlite.svg" style="height:40px;" /></li>
+                </ul>
+
+            </div>
+        </div>
+        <div id="footer">Developed by Zyler Wies for MIS 3033 Exam 2</div>
+
+
+    </div>
+
+
+
+    <!--<img src="img/head1.png" style="height:100px;" />
+    <img src="img/head2.png" style="height:100px;" />
+    <img src="img/linkedin.png" style="height:100px;" />
+    <img src="img/html.svg" style="height:100px;" />
+    <img src="img/css.svg" style="height:100px;" />
+    <img src="img/javascript.svg" style="height:100px;" />
+    <img src="img/sqlite.svg" style="height:100px;" />
+    <img src="img/logo.svg" style="height:100px;" />-->
 </body>
 </html>
