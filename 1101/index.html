@@ -1,21 +1,159 @@
 <html>
 <head>
-    <title>MIS 3033 November 1, Zyler Wies</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Data table -->
+    <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
+    <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
+
+    <!-- Animation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+    <!-- Map -->
+    <link href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" rel="stylesheet" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- sweetalert2 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.8.0/sweetalert2.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.8.0/sweetalert2.all.min.js"></script>
+
+
+    <title>MIS 3033 November 1, Zyler Wies</title>
     <style>
-        .sty1{
-            width:100px;
-            height:100px;
-            border-style:solid;
-            border-width:2px;
-            background-color:mediumaquamarine;
-            margin-top:20px;
+        .sty1 {
+            width: 100px;
+            height: 100px;
+            border-style: solid;
+            border-width: 2px;
+            background-color: mediumaquamarine;
+            margin-top: 20px;
         }
     </style>
+
 </head>
 <body>
+    <div class="btn-group" style="margin:20px;">
+        <button id="citybtn" class="btn btn-warning">Load Cities</button>
+        <button id="statebtn" class="btn btn-danger">Load States</button>
+    </div>
+    <div id="table"></div>
+    <div>
+        <canvas id="c1"></canvas>
+    </div>
+    <script>
+        "use strict";
+        var g;
+        var grid = null;
+ 
+        {
+            let citybtn = document.querySelector("#citybtn");
+            let statebtn = document.querySelector("#statebtn");
+            citybtn.addEventListener("click", async () => {
+
+                if (grid != null) {
+                    grid.destroy();
+                }
+                let url = "https://juxinglong.github.io/static/data/cities.json";
+                let r = await fetch(url);
+                let rj = await r.json();
+
+                g = rj;
+                let params;
+                params = {
+                    data: rj,
+                    pagination: { limit: 5, },
+                    search: true,
+                    sort: true,
+                    width: 800,
+                };
+                let table = document.querySelector("#table");
+                grid = new gridjs.Grid(params);
+                grid.render(table);
+
+
+
+                params = {
+                    title: "City Loaded",
+                    text: "More Information About Cities",
+                    icon: "success",
+
+                };
+                Swal.fire(params);
+
+
+
+
+
+            }); // end
+        }
+        statebtn.addEventListener("click", async () => {
+            if (grid != null) {
+                grid.destroy();
+
+
+            }
+            let url = "https://juxinglong.github.io/static/data/states.json";
+            let r = await fetch(url);
+            let rj = await r.json();
+
+            g = rj;
+            let params;
+
+            params =
+            {
+                type: 'pie',
+                data: {
+                    labels: rj.map(x=>x.st),
+                    datasets: [{
+                        label: '# of Votes',
+                        data: rj.map(x => x.p),
+                        borderWidth: 1
+                    }]
+                }
+            };
+
+            let c1 = document.querySelector("#c1");
+            let chart1 = new Chart(c1, params);
+
+                params = {
+                    data: rj,
+                    pagination: { limit: 5, },
+                    search: true,
+                    sort: true,
+                    width: 800,
+                };
+                let table = document.querySelector("#table");
+                grid = new gridjs.Grid(params);
+                grid.render(table);
+
+
+
+                params = {
+                    title: "City Loaded",
+                    text: "More Information About Cities",
+                    icon: "success",
+
+                };
+                Swal.fire(params);
+
+
+
+
+
+            }); // end
+
+    </script>
+
+
+
+
+
+
     <div style="margin:20px;">
         <button id="btn1" class="btn btn-success">Translate X</button>
         <div id="d1" class="sty1"></div>
@@ -62,5 +200,28 @@
             }
         </script>
     </div>
+
+    <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+        <button id="btn3" class="btn btn-success">Translate X</button>
+        <div id="d3" class="sty1"></div>
+
+        <script>
+            "use strict";
+            {
+                let x = 200
+                let btn = document.querySelector("#btn3");
+                btn3.addEventListener("click", () => {
+                    x = x * -1;
+                    let div = document.querySelector("#d3");
+                    let params = {
+                        targets: div,
+                        translateX: { value: x, duration: 3000 },
+                    };
+                    anime(params);
+                })
+            }
+        </script>
+    </div>
+
 </body>
 </html>
