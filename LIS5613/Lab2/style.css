@@ -1,0 +1,5 @@
+body { font-family: "Arial, sans-serif"; }
+img { width: 300px; }
+form { padding: 20px; border: 2px solid black; }
+form { box-sizing: border-box; }
+@media (max-width: 600px) { body { background-color: lightgray; } }
