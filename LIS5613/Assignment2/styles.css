@@ -1,16 +1,21 @@
 body {
-  background-color: #121212; /* Dark background */
-  color: #e0e0e0; /* Light text color */
-  font-family: Arial, sans-serif; /* Font style */
+  background-color: #121212; 
+  color: #e0e0e0;
+  font-family: Arial, sans-serif;
 }
 div {
   width: 500px;
-  background-color: #1f1f1f; /* Slightly lighter background for divs */
+  background-color: #1f1f1f;
   padding: 20px;
   border-radius: 8px;
 }
 h4 {
   font-weight: bold;
-  color: #e0e0e0; /* Light color for headings */
+  color: #e0e0e0; 
+}
+ul.list-group {
+  background-color: #333333;
+  border: 1px solid #444444; 
+  border-radius: 8px;
 }
 @media (max-width: 600px) { body { background-color: lightgray; } }
