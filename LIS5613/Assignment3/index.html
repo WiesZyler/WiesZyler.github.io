@@ -39,6 +39,16 @@
         let label = document.createElement("label");
           label.className = "form-check-label";
           label.textContent = itemText;
+
+        checkbox.addEventListener('change', function() {
+              if (checkbox.checked) {
+                label.style.textDecoration = "line-through"; 
+              } else {
+                label.style.textDecoration = "none"; 
+              }
+            });
+
+        
           li.appendChild(checkbox);
           li.appendChild(label);
           ul.appendChild(li);
