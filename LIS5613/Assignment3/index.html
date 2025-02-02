@@ -4,56 +4,58 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Assignment 1</title>
+    <title>Assignment 3</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-     <h1>Zyler Wies's Portfolio</h1>
-    <h4>I am MS/MIT student at the Univeristy of Oklahoma</h4>
+     <h1>Check List</h1>
+    <input type="text" id="itemInput" placeholder="Enter item">
+    <button onclick="addItem()">Add Item</button>
 
     <div>
-      <h4> Projects </h4>
-      <ul class="list-group">
-        <li class="list-group-item">
-          <h5 class="mb-1">Interactive Yu-Gi-Oh! Database</h5>
-           <p class="mb-1">database website for users to see cards, stores, packs, and even create decks.</p>
-        </li>
-        <li class="list-group-item">
-        <h5 class="mb-1">Spotify Song Popularity Analysis</h5>
-           <p class="mb-1">Using spotify's API created a dataset and performed analysis on what elements make songs popular</p>  
-        </li>
-      </ul>
+      <ul class="list-group" id="itemList">
+  <li class="list-group-item">
+    <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+    <label class="form-check-label" for="firstCheckbox">First checkbox</label>
+  </li>
+  <li class="list-group-item">
+    <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
+    <label class="form-check-label" for="secondCheckbox">Second checkbox</label>
+  </li>
+  <li class="list-group-item">
+    <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
+    <label class="form-check-label" for="thirdCheckbox">Third checkbox</label>
+  </li>
+</ul>
     </div>
 
-        <div>
-      <h4> Awards </h4>
-      <ul class="list-group">
-        <li class="list-group-item">
-          <h5 class="mb-1">Presidential Honor Role Fall 2023 - Spring 2024</h5>
-           <p class="mb-1">Maintained 4.0 Average GPA among the mentioned semesters </p>
-        </li>
-        <li class="list-group-item">
-        <h5 class="mb-1">Dean's Honor Rolls Spring 2023 - Fall 2024</h5>
-           <p class="mb-1">Maintained 3.5 Average GPA among the mentioned semesters </p>  
-        </li>
-      </ul>
-    </div>
+    <script>
+     function addItem() {
+            let input = document.getElementById("itemInput");
+            let itemText = input.value.trim();
+      if (itemText !== ""){
+        let ul = document.getElementById("itemList");
 
-    <div>
-      <h4> Contact Me </h4>
-      <a href="mailto:zwies@ou.edu">
-      <button type="button" class="btn btn-primary">
-        <img src="img/mail.png" alt="Email" style="width: 30px; height: 30px;">
-      </button>
-    </a>
-    <a href="https://www.linkedin.com/in/zylerwies/" target="_blank">
-      <button type="button" class="btn btn-primary">
-        <img src="img/linkedin.png" alt="LinkedIn" style="width: 30px; height: 30px;">
-      </button>
-    </a>
-    </div>
-    
+        let li = document.createElement("li");
+        li.className = "list-group-item";
+
+        let checkbox = document.createElement("input");
+          checkbox.type = "checkbox";
+          checkbox.className = "form-check-input me-1";
+
+        let label = document.createElement("label");
+          label.className = "form-check-label";
+          label.textContent = itemText;
+          li.appendChild(checkbox);
+          li.appendChild(label);
+          ul.appendChild(li);
+        input.valye = "";
+      }
+       else {alert("Please Enter A Valid Item.")}
+        }
+    </script>
+      
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
